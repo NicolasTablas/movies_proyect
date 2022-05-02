@@ -3,6 +3,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color:rgb(200, 198, 198);
+}
+.errores {
+    color: red;
+    font-size: large;
 }
 
 body {
@@ -22,7 +27,6 @@ header {
     display: flex;
     justify-content:space-around;
     width: 100%;
-    
     padding-top: 20px; padding-bottom: 20px;
     margin-left: 10%; margin-right: 10%;
     background-color: rgb(28, 28, 28)

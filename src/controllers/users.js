@@ -65,7 +65,6 @@ module.exports = {
     }, 
 
     saveUser: async (req, res) => {
-        //const create = await users.create(req.body)
         let errors = validationResult(req)
         console.log(errors.mapped())
         if(!errors.isEmpty()){
@@ -76,6 +75,7 @@ module.exports = {
                 oldData: req.body
             })
         } else {
+        const create = await users.create(req.body)
         res.redirect("/")
         }
     },

@@ -4,36 +4,37 @@
 <body>
 <%- include("./includes/header") %>
 <main>      
+    <%- include("./includes/errors") %>    
         <form action="/movie/create"  method="post"> 
-            <section>
+            <section class="section-movie-edit">
                 <fieldset>
-                    <label for="title">Titulo</label>
+                    <div class="div-span-descripcion"><label for="title">Titulo</label></div>
                         <input type="text" name="title" id="title" placeholder="title">
                 </fieldset>
                 <fieldset>
-                    <label for="rating">rating</label>
+                    <div class="div-span-descripcion"><label for="rating">rating</label></div>
                         <input type="text" name="rating" id="rating" placeholder="rating">
                 </fieldset>
                 <fieldset>
-                    <label for="rating">Fecha estreno</label>
+                    <div class="div-span-descripcion"><label for="rating">Fecha estreno</label></div>
                         <input type="date" name="release_date" id="release_date" placeholder="Fecha estreno">
                 </fieldset>
                 <fieldset>
-                    <label for="awards">Awards</label>
+                    <div class="div-span-descripcion"><label for="awards">Awards</label></div>
                         <input type="text" name="awards" id="awards" placeholder="awards">
                 </fieldset>
                 <fieldset>
-                    <label for="length">Duracion</label>
+                    <div class="div-span-descripcion"><label for="length">Duracion</label></div>
                         <input type="text" name="length" id="length" placeholder="Duracion"">
                 </fieldset>
                 <fieldset>
-                    <label for="genre_id">Duracion</label>
+                    <div class="div-span-descripcion"><label for="genre_id">Duracion</label></div>
                         <input type="genre_id" name="genre_id" id="genre_id" placeholder="ID Genero">
                 </fieldset>
             </section>
-            <button class="boton-guardar" type="submit" id="button">
-                GUARDAR
-            </button>         
+            <div class="div-button"><button class="boton-guardar" type="submit" id="button">
+                CREAR
+            </button></div>        
         </form>
 </main>  
 

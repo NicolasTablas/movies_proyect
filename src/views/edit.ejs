@@ -2,52 +2,54 @@
 <%- include("./includes/header") %>
 <body>
     <% if (locals.movie) { %> 
-      
-        <form action="<%=movie.id%>"  method="post"> 
-            <section>
+<main>      
+    <%- include("./includes/errors") %>
+            <form action="<%=movie.id%>"  method="post"> 
+            <section class="section-movie-edit">
                 <fieldset>
-                    <label for="id">ID</label>
+                    <div class="div-span-descripcion"><label for="id">ID:</label></div>
                         <input type="text" name="id" id="id" readonly="readonly" 
                                value= "<%= locals.movie ? movie.id : null %>">
                 </fieldset>
-                <fieldset>
-                    <label for="title">Titulo</label>
+                <fieldset> 
+                    <div class="div-span-descripcion"><label for="title">Titulo:</label></div>
                         <input type="text" name="title" id="title" placeholder="title" 
                                value= "<%= locals.movie ? movie.title : null %>">
                 </fieldset>
                 <fieldset>
-                    <label for="title">Fecha estreno</label>
-                        <input type="text" name="release_date" id="release_date" placeholder="Fecha estreno" 
+                    <div class="div-span-descripcion"><label for="title">Estreno:</label></div>
+                        <input type="text" name="release_date" id="release_date" placeholder="Estreno" 
                                value= "<%= locals.movie ? movie.release_date : null %>">
                 </fieldset>
                 <fieldset>
-                    <label for="rating">rating</label>
+                    <div class="div-span-descripcion"><label for="rating">rating:</label></div>
                         <input type="text" name="rating" id="rating" placeholder="rating" 
                                value= "<%= locals.movie ? movie.rating : null %>">
                 </fieldset>
                 <fieldset>
-                    <label for="awards">Awards</label>
+                    <div class="div-span-descripcion"><label for="awards">Awards:</label></div>
                         <input type="text" name="awards" id="awards" placeholder="awards" 
                                value= "<%= locals.movie ? movie.awards : null %>">
                 </fieldset>
                 <fieldset>
-                    <label for="length">Duracion</label>
+                    <div class="div-span-descripcion"><label for="length">Duracion:</label></div>
                         <input type="text" name="length" id="length" placeholder="Duracion" 
                                value= "<%= locals.movie ? movie.length : null %>">
                 </fieldset>
                 <fieldset>
-                    <label for="genre_id">Duracion</label>
+                    <div class="div-span-descripcion"><label for="genre_id">Genero</label></div>
                         <input type="genre_id" name="genre_id" id="genre_id" placeholder="ID Genero" 
                                value= "<%= locals.movie ? movie.genre_id : null %>">
                 </fieldset>
             </section>
-            <button class="boton-guardar" type="submit" id="button">
+            <div class="div-button"><button class="boton-guardar" type="submit" id="button">
                 GUARDAR
-            </button>         
+            </button></div>        
         </form>  
         
         <% } else { %>
             <h2> No hay pelicula</h2>
    <% } %>
+</main>
 </body>
 </html>

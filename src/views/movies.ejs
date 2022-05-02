@@ -4,12 +4,13 @@
 <body>
 
     <%- include("./includes/header") %>
-<main>
+<main> 
     <% if (locals.info) { %> 
         <% if (info.length > 0) { %>
-           <ul>
+           <section class="section-movie-li">
+               <ul>
             <% info.forEach(movie => { %>
-                <section>
+                
                 <li>
                     <a href="/movie/<%= movie.id %> "> 
                     <span>
@@ -19,15 +20,15 @@
                         <%= movie.title %> 
                     </span>
                     </a>
-                    <form action="movie/delete/<%= movie.id %>"  method="post">
-                        <button class="boton-delete" type="submit" id="button">
+                    <div class="div-boton-borrar"><form action="movie/delete/<%= movie.id %>"  method="post">
+                        <button class="boton-delete1" type="submit" id="button">
                             <i class="fas fa-trash"></i>
                         </button>
-                    </form>
+                    </form></div>
             </li>
-                </section>          
+                        
             <% }) %>
-        </ul>
+        </ul></section>
         <% } else { %>
             <h2> No hay pelicula</h2>
         <% } %>

@@ -5,38 +5,77 @@
 <%- include("./includes/header") %>
 <main>    
     <% if (locals.movie) { %> 
-                <section>
-                    <span>
+            <section class="section-movie-detail">
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">ID:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie.id %> 
-                    </span>
-                    <span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Titulo:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie.title %> 
-                    </span>
-                    <span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Rating:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie.rating %> 
-                    </span>
-                    <span>
-                        <%= movie.release_date %>  
-                    </span>
-                    <span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Estreno:</span></div>
+                    <div class="div-span-movie"><span>
+                        <%= movie.release_date %> 
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Awards:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie.awards %> 
-                    </span>
-                    <span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Duracion:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie.length %> 
-                    </span>
-                    <span>
-                        <%= movie.genre_id %> 
-                    </span>
-                    <span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Genero:</span></div>
+                    <div class="div-span-movie"><span>
                         <%= movie["movies_genre_id_foreign"] ? movie["movies_genre_id_foreign"].name : "Sin Genero" %> 
-                    </span>
+                    </span></div>
+                </fieldset>
+                <fieldset>
+                    <div class="div-span-descripcion"><span class="movie-detail-descripcion">Actores:</span></div>
+                    <ul class="div-span-movie">
+                        <ul>
+                            <% movie.actor_movie_actor_id_foreign.forEach(actor => { %>
+                                <li><%= actor.first_name + " " + actor.last_name %> </li>
+                            <% }) %> 
+                        </ul>
+                    </ul>
+                </fieldset>
                
-                </section>          
+            </section>
+            <% if (userLog) {%>
+            <% if (userLog.rol ==1 ) {%>    
+            <section class="div-button">          
                 <form action="edit/<%= movie.id %>">
-                    <button class="boton-delete" type="submit" id="button">
+                       <button class="boton-delete" type="submit" id="button1">
                         EDITAR
                     </button>
+                
+                <form action="delete/<%= movie.id %>" method="post">
+                    <button class="boton-delete" type="submit" id="button">
+                        BORRAR
+                    </button>
                 </form>
+            <section>
+            <% } %>
+            <% } %>
         
         <% } else { %>
             <h2> No hay pelicula</h2>

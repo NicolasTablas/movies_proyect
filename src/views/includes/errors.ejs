@@ -5,4 +5,19 @@
     <% if (errors.password){ %>
         <p class="errores"><%= errors.password.msg %> </p>
     <% } %>
+    <% if (errors.rating){ %>
+        <p class="errores"><%= errors.rating.msg %> </p>
+    <% } %>
+    <% if (errors.name){ %>
+        <p class="errores"><%= errors.name.msg %> </p>
+    <% } %>
+    <% if (errors.awards){ %>
+        <p class="errores"><%= errors.awards.msg %> </p>
+    <% } %>
+    <% if (errors.release_date){ %>
+        <p class="errores"><%= errors.release_date.msg %> </p>
+    <% } %>
+    <% if (errors.title){ %>
+        <p class="errores"><%= errors.title.msg %> </p>
+    <% } %>
 <% } %>
