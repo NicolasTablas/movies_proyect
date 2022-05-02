@@ -1,0 +1,33 @@
+*{
+
+    color:rgb(200, 198, 198);
+
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(2, 2, 2);
+}
+
+main {
+    margin-left: 10%; margin-right: 10%;
+    background-color: rgb(28, 28, 28);
+    width: 100%;
+    min-height: 90vh;
+}
+
+li{
+    display: flex;
+    width: 99%;
+    flex-wrap: nowrap;
+    margin: 10px 10px 10px;
+    justify-content: flex-start;
+
+}
+form{
+    max-width: 20px;
+    max-height: 20px;
+}

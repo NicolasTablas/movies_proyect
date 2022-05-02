@@ -1,0 +1,33 @@
+<%- include("./includes/head") %>
+
+
+<body>
+    <%- include("./includes/header") %>
+<main>
+    <%- include("./includes/errors") %>
+        <form action="/register"  method="post"> 
+            <section>
+                <fieldset>
+                    <label for="title">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Nombre">
+                </fieldset>
+                <fieldset>
+                    <label for="rating">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email">
+                </fieldset>
+                <fieldset>
+                    <label for="rating">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                </fieldset>
+                <fieldset>
+                    <label for="awards">Password</label>
+                        <input type="password" name="password2" id="password2" placeholder="Password">
+                </fieldset>
+            </section>
+            <button class="boton-guardar" type="submit" id="button">
+                GUARDAR
+            </button>         
+        </form>  
+    </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+module.exports = (req,res,next) => req.session && req.session.userLog ? req.session.userLog.rol == 1 ? next() : res.redirect("/") : res.redirect("/");

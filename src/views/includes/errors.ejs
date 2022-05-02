@@ -1,0 +1,8 @@
+<% if (locals.errors) { %>
+    <% if (errors.email){ %>
+        <p class="errores"><%= errors.email.msg %>  </p>
+    <% } %>
+    <% if (errors.password){ %>
+        <p class="errores"><%= errors.password.msg %> </p>
+    <% } %>
+<% } %>

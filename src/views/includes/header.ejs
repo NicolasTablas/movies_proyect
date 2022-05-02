@@ -1,0 +1,14 @@
+<header>
+    <section class="reg-log">
+        <% if (!userLog) {%>
+            <a href="/register">Registrarse</a>
+            <a href="/login">Ingresar</a>
+        <% } else { %>
+            <p> <%= userLog.name%></p>
+            <a href="/logout">Logout</a>
+        <% }  %>
+    </section>
+    <section class="create-header">
+        <a href="/movie/create">Crear Pelicula</a>
+    </section>
+</header>

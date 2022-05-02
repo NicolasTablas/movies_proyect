@@ -1,0 +1,45 @@
+<%- include("./includes/head") %>
+
+
+<body>
+<%- include("./includes/header") %>
+<main>    
+    <% if (locals.movie) { %> 
+                <section>
+                    <span>
+                        <%= movie.id %> 
+                    </span>
+                    <span>
+                        <%= movie.title %> 
+                    </span>
+                    <span>
+                        <%= movie.rating %> 
+                    </span>
+                    <span>
+                        <%= movie.release_date %>  
+                    </span>
+                    <span>
+                        <%= movie.awards %> 
+                    </span>
+                    <span>
+                        <%= movie.length %> 
+                    </span>
+                    <span>
+                        <%= movie.genre_id %> 
+                    </span>
+                    <span>
+                        <%= movie["movies_genre_id_foreign"] ? movie["movies_genre_id_foreign"].name : "Sin Genero" %> 
+                    </span>
+               
+                </section>          
+                <form action="edit/<%= movie.id %>">
+                    <button class="boton-delete" type="submit" id="button">
+                        EDITAR
+                    </button>
+                </form>
+        
+        <% } else { %>
+            <h2> No hay pelicula</h2>
+   <% } %>
+</main>
+</body>

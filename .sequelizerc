@@ -1,0 +1,7 @@
+const path = require('path')
+
+module.exports = {
+    "env":process.env.DB || 'development',
+    "config": path.join(__dirname,'src/database/config', 'config.json'),
+    "models-path": path.join(__dirname,'src/database/models'),
+}

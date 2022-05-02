@@ -1,0 +1,39 @@
+
+<%- include("./includes/head") %>
+
+<body>
+
+    <%- include("./includes/header") %>
+<main>
+    <% if (locals.info) { %> 
+        <% if (info.length > 0) { %>
+           <ul>
+            <% info.forEach(movie => { %>
+                <section>
+                <li>
+                    <a href="/movie/<%= movie.id %> "> 
+                    <span>
+                        <%= movie.id %> 
+                    </span>
+                    <span>
+                        <%= movie.title %> 
+                    </span>
+                    </a>
+                    <form action="movie/delete/<%= movie.id %>"  method="post">
+                        <button class="boton-delete" type="submit" id="button">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+            </li>
+                </section>          
+            <% }) %>
+        </ul>
+        <% } else { %>
+            <h2> No hay pelicula</h2>
+        <% } %>
+        <% } else { %>
+            <h2> No hay pelicula</h2>
+   <% } %>
+</main>
+</body>
+</html>

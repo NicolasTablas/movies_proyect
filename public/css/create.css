@@ -1,0 +1,30 @@
+*{
+    background-color: rgb(2, 2, 2);
+    color:rgb(200, 198, 198);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+   
+
+}
+body {
+    height: 100%;
+    max-width: 1000px;
+    background-color: rgb(80, 80, 80);
+    display: flex;
+    flex-wrap: wrap;
+}
+section{
+    max-width: 900px;
+    min-width: 900px;
+    margin: 15px;
+}
+
+span {
+    margin: 15px;
+}
+
+fieldset{
+    width: 90%;
+}

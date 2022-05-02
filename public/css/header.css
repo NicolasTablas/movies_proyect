@@ -1,0 +1,29 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(2, 2, 2);
+}
+
+main {
+    margin-left: 10%; margin-right: 10%;
+    background-color: rgb(28, 28, 28);
+    width: 100%;
+    min-height: 90vh;
+}
+
+header {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    
+    padding-top: 20px; padding-bottom: 20px;
+    margin-left: 10%; margin-right: 10%;
+    background-color: rgb(28, 28, 28)
+}

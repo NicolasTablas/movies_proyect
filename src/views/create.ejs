@@ -1,0 +1,41 @@
+<%- include("./includes/head") %>
+
+
+<body>
+<%- include("./includes/header") %>
+<main>      
+        <form action="/movie/create"  method="post"> 
+            <section>
+                <fieldset>
+                    <label for="title">Titulo</label>
+                        <input type="text" name="title" id="title" placeholder="title">
+                </fieldset>
+                <fieldset>
+                    <label for="rating">rating</label>
+                        <input type="text" name="rating" id="rating" placeholder="rating">
+                </fieldset>
+                <fieldset>
+                    <label for="rating">Fecha estreno</label>
+                        <input type="date" name="release_date" id="release_date" placeholder="Fecha estreno">
+                </fieldset>
+                <fieldset>
+                    <label for="awards">Awards</label>
+                        <input type="text" name="awards" id="awards" placeholder="awards">
+                </fieldset>
+                <fieldset>
+                    <label for="length">Duracion</label>
+                        <input type="text" name="length" id="length" placeholder="Duracion"">
+                </fieldset>
+                <fieldset>
+                    <label for="genre_id">Duracion</label>
+                        <input type="genre_id" name="genre_id" id="genre_id" placeholder="ID Genero">
+                </fieldset>
+            </section>
+            <button class="boton-guardar" type="submit" id="button">
+                GUARDAR
+            </button>         
+        </form>
+</main>  
+
+</body>
+</html>
